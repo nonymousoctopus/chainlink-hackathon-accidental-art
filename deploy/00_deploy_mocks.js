@@ -15,8 +15,9 @@ module.exports = async({
             log: true, 
             args: [LinkToken.address]
         })
+        const SVGShapes = await deploy('SVGShapes', {from: deployer, log: true})
         log("Mocks deployed!")
     }
 }
 //this allows you to deploy just a deployment script tagged with the bellow tags by using something like this in terminal: hh deploy --tags svg
-module.exports.tags = ['all', 'rsvg', 'svg'] /* NEED to update */
+module.exports.tags = ['all', 'aart']
