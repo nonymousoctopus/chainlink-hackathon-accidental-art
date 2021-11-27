@@ -1,12 +1,15 @@
 # Using this frontend template
 
-1. Ensure you have already deployed your contract (and have the contract address and abi available), and created a server on your Moralis admin page.
+**Ensure you have already deployed your contract (and have the contract address and abi available), and created a server on your Moralis admin page.**
 
-2. Update the index.js file with your:
+2. Update the following in the index.js file:
+
+```jacascript
     serverUrl - obtain from Moralis admin page
     appId - obtain from Moralis admin page
     CONTRACT_ADDRESS - this is your deployed contract address
     CHAINLINK_ADDRESS - this is the chainlink token address of the network you deployed your contract on
+    ```
 
 3. Update the abi.js file with your code's abi. 
 
