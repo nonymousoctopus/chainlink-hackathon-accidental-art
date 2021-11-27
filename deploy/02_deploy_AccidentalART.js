@@ -32,7 +32,7 @@ module.exports = async({
     let args = [vrfCoordinatorAddress, linkTokenAddress, keyHash, fee, oracle, jobId]
 
     log("-----------------------------------------")
-    const AccidentalART = await deploy('AccidentalArt', {
+    const AccidentalART = await deploy('AccidentalART', {
         from: deployer, 
         args: args, 
         log: true
@@ -40,7 +40,7 @@ module.exports = async({
     log("You have deployed your NFT contract!")
     const networkName = networkConfig[chainId]["name"]
     log(jobId)
-    log(`Verify with: \n npx hardhat verify --network ${networkName} ${AccidentalArt.address} ${args.toString().replace(/,/g, " ")
+    log(`Verify with: \n npx hardhat verify --network ${networkName} ${AccidentalART.address} ${args.toString().replace(/,/g, " ")
     }`)    
 }
 
