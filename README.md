@@ -18,11 +18,11 @@ Navigate to the folder
 cd chainlink-hackathon-accidental-art
 ```
 
-## Deploying the external adapter to get random words
+## 1 - Deploying the external adapter to get random words
 
 The external adapter code and instructions are included in the [random-word-ea](https://github.com/nonymousoctopus/chainlink-hackathon-accidental-art/tree/main/random-word-ea) folder. 
 
-## Deploying the smart contract for the DApp
+## 2 - Deploying the smart contract for the DApp
 
 1. Create a .env file using the .env.example provided, and fill in your details. You will need an RPC URL, Private Key or Mnemonic, and the API Key for etherscan/polygonscan etc...
 
@@ -33,13 +33,13 @@ The external adapter code and instructions are included in the [random-word-ea](
 * Install hardhat:
 
 ```bash
-    npm install --save-dev hardhat
+npm install --save-dev hardhat
 ```
 
 * Install hardhat-deploy
 
 ```bash
-    yarn add hardhat-deploy
+yarn add hardhat-deploy
 ```
 
 4. Deploy your contract 
@@ -47,23 +47,23 @@ The external adapter code and instructions are included in the [random-word-ea](
 * To a localhost
 
 ```bash
-    npx hardhat deploy
+npx hardhat deploy
 ```
 
 * To a testnet
 
 ```bash
-    npx hardhat deploy --network NETWOR_NAME --tags aart
+npx hardhat deploy --network NETWOR_NAME --tags aart
 ```
 
 5. Verify your contract using the verification code provided at deployment (it will look similar to the below code)
 
 ```bash
-    npx hardhat verify --network NETWORK_NAME CONTRACT_ADDRESS VRF_COORDINATOR_ADDRESS LINK_TOKEN_ADDRESS KEY_HASH FEE ORACLE_ADDRESS JOB_ID
+npx hardhat verify --network NETWORK_NAME CONTRACT_ADDRESS VRF_COORDINATOR_ADDRESS LINK_TOKEN_ADDRESS KEY_HASH FEE ORACLE_ADDRESS JOB_ID
 ```
 
 6. Copy your contract address and ABI for the next step
 
-## Deploying the front end of the DApp
+## 3 - Deploying the front end of the DApp
 
 The front end DApp code and instructions are included in the [front-end](https://github.com/nonymousoctopus/chainlink-hackathon-accidental-art/tree/main/front-end) folder.
