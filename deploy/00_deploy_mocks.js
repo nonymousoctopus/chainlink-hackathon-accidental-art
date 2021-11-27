@@ -19,5 +19,5 @@ module.exports = async({
         log("Mocks deployed!")
     }
 }
-//this allows you to deploy just a deployment script tagged with the bellow tags by using something like this in terminal: hh deploy --tags svg
+//this allows you to deploy just a deployment script tagged with the bellow tags by using something like this in terminal: npx hardhat deploy --tags aart
 module.exports.tags = ['all', 'aart']

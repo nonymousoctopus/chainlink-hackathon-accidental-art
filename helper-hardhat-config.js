@@ -4,7 +4,7 @@ const networkConfig = {
         keyHash: '0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311', 
         fee: '100000000000000000',
         oracle: '0x0DB2363890527738cDe621dF7BB69C2C4aB7ccEc', 
-        jobId: '29fa9aa13bf1468788b7cc4a500a45b8', 
+        jobId: '0x29fa9aa13bf1468788b7cc4a500a45b8', 
         fund: '200000000000000000'
     },
     4: {
@@ -30,4 +30,3 @@ const networkConfig = {
 module.exports = {
     networkConfig
 }
-

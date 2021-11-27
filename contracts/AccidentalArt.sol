@@ -54,7 +54,7 @@ library SVGShapes {
 }
 
 
-contract RandomSVG is ChainlinkClient, ERC721URIStorage, VRFConsumerBase {
+contract AccidentalArt is ChainlinkClient, ERC721URIStorage, VRFConsumerBase {
 
     using Strings for string;
     using SVGShapes for string;
