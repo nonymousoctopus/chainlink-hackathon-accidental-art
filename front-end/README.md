@@ -11,7 +11,7 @@ const CONTRACT_ADDRESS = "YOUR_CONTRACT_ADDRESS"; //this is your deployed contra
 const CHAINLINK_ADDRESS = "LINK_TOKEN_CONTRACT_ADDRESS_ON_YOUR_CHOSEN_CHAIN"; //this is the chainlink token address of the network you deployed your contract on
 ```
 
-## Update the abi.js file with your code's abi. it shoudl look like this:
+## Update the abi.js file with your code's abi. it should look like this:
 
 ```javascript
 const contractAbi = INSERT_YOUR_ABI_INCLUDING_[]_HERE
