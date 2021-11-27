@@ -130,10 +130,10 @@ If using a REST API Gateway, you will need to disable the Lambda proxy integrati
 
 Create a new Bridge as follows:
 
-Bridge Name	$REPLACE_WITH_BRIDGE_NAME
-Bridge URL $REPLACE_WITH_YOUR_URL
-Confirmations	0
-Minimum Contract Payment	0
+* Bridge Name	$REPLACE_WITH_BRIDGE_NAME
+* Bridge URL $REPLACE_WITH_YOUR_URL
+* Confirmations	0
+* Minimum Contract Payment	0
 
 ## How to add a job on your node
 
