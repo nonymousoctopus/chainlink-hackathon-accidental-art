@@ -137,9 +137,9 @@ Minimum Contract Payment	0
 
 ## How to add a job on your node
 
-```toml
-Create a new job - modify this template TOML code:
 
+Create a new job - modify this template TOML code:
+```
 type = "directrequest"
 schemaVersion = 1
 name = "YOUR_JOB_NAME"
@@ -150,7 +150,6 @@ observationSource = """
                   abi="OracleRequest(bytes32 indexed specId, address requester, bytes32 requestId, uint256 payment, address callbackAddr, bytes4 callbackFunctionId, uint256 cancelExpiration, uint256 dataVersion, bytes data)"
                   data="$(jobRun.logData)"
                   topics="$(jobRun.logTopics)"]
-
     decode_cbor  [type=cborparse data="$(decode_log.data)"]
     fetch        [type=bridge name="$REPLACE_WITH_BRIDGE_NAME" requestData="{\\"id\\": \\"0\\"}"]
     parse        [type="jsonparse" path="data,0" data="$(fetch)"]
@@ -160,7 +159,6 @@ observationSource = """
                   data="{\\"requestId\\": $(decode_log.requestId), \\"payment\\": $(decode_log.payment), \\"callbackAddress\\": $(decode_log.callbackAddr), \\"callbackFunctionId\\": $(decode_log.callbackFunctionId), \\"expiration\\": $(decode_log.cancelExpiration), \\"data\\": $(encode_data)}"
                  ]
     submit_tx    [type=ethtx to="REPLACE_WITH_YOUR_ORACLE_CONTRACT_ADDRESS" data="$(encode_tx)"]
-
     decode_log -> decode_cbor -> fetch -> parse -> encode_data -> encode_tx -> submit_tx
 """
 ```
