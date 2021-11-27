@@ -3,7 +3,6 @@ require("@nomiclabs/hardhat-ethers")
 require('hardhat-deploy')
 require("@nomiclabs/hardhat-etherscan");
 require('dotenv').config()
-require('hardhat-contract-sizer');
 
 const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL
 const MUMBAI_RPC_URL = process.env.MUMBAI_RPC_URL
