@@ -1,8 +1,8 @@
 # Chainlink NodeJS Random Word External Adapter
 
-Created using this template: https://github.com/thodges-gh/CL-EA-NodeJS-Template.git
+**Created using this template:** https://github.com/thodges-gh/CL-EA-NodeJS-Template.git
 
-To deploy on your own chainlink node:
+## How to deploy on your own chainlink node:
 
 1. From the main project - enter into this directory
 
@@ -45,7 +45,7 @@ In this case, the random word is "involvement"
 
 6. Prepare for deployment on your Chainlink node using the instructions below:
 
-## Docker
+### Docker
 
 If you wish to use Docker to run the adapter, you can build the image by running the following command:
 
@@ -59,7 +59,7 @@ Then run it with:
 docker run -p 8080:8080 -it external-adapter:latest
 ```
 
-## Serverless hosts
+### Serverless hosts
 
 After [installing locally](#install-locally):
 
@@ -87,7 +87,7 @@ zip -r random-word-ea.zip .
   - Value: Your_API_key
 - Save
 
-#### To Set Up an API Gateway (HTTP API)
+### To Set Up an API Gateway (HTTP API)
 
 If using a HTTP API Gateway, Lambda's built-in Test will fail, but you will be able to externally call the function successfully.
 
@@ -98,7 +98,7 @@ If using a HTTP API Gateway, Lambda's built-in Test will fail, but you will be a
 - Select the security for the API
 - Click Add
 
-#### To Set Up an API Gateway (REST API)
+### To Set Up an API Gateway (REST API)
 
 If using a REST API Gateway, you will need to disable the Lambda proxy integration for Lambda-based adapter to function.
 
@@ -126,7 +126,7 @@ If using a REST API Gateway, you will need to disable the Lambda proxy integrati
 - Select a Storage Bucket to keep the zip in
 - Function to execute: gcpservice
 
-7. Add a bridge on your node
+## How to add a bridge on your node
 
 Create a new Bridge as follows:
 
@@ -135,8 +135,9 @@ Bridge URL $REPLACE_WITH_YOUR_URL
 Confirmations	0
 Minimum Contract Payment	0
 
-8. Add a job on your node
+## How to add a job on your node
 
+```toml
 Create a new job - modify this template TOML code:
 
 type = "directrequest"
@@ -162,6 +163,7 @@ observationSource = """
 
     decode_log -> decode_cbor -> fetch -> parse -> encode_data -> encode_tx -> submit_tx
 """
+```
 
 Once created, go to the job's definition and copy the externalJobID. It should look this "61b2b923-7311-42ae-9d1c-a7b93c091f35"
 
@@ -169,10 +171,11 @@ You will need to delete the dashes and add "0x" at the begining of the job ID wh
 
 it shoudl look like this: 0x61b2b923731142ae9d1ca7b93c091f35
 
-9. troubleshooting
+## Troubleshooting
 
 The above instructions were based on Node version 1.0.0, if your node doesn't respond correctly, you may need to edit the node's .env file to add webhook v2
 
 edit the .env and add this line
-
+```
 FEATURE_WEBHOOK_V2=true
+```
