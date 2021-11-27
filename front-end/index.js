@@ -87,8 +87,6 @@ function renderInventory(NFTs, nftOwners){
             item.innerHTML = htmlString;
             parent.appendChild(item);
             counter++;
-            console.log("i is " + i);
-            console.log("Counter is " + counter);
         }
     } catch(error) {
         console.log("Oh-oh, the testnets is a little slow. You may be seeing some issues in rendering the NFTs, please give it a minutes and refresh the page")
